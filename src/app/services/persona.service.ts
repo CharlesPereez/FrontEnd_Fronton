@@ -22,6 +22,6 @@ export class PersonaService {
   }
 
   eliminarPersona(PersonaId: number): Observable<void>{
-    return this.http.delete<void>(`${this.myAppUrl}${this.myApiUrl}${PersonaId}`)
+    return this.http.delete<void>(`${this.myAppUrl}${this.myApiUrl}${PersonaId}`);
   }
 }

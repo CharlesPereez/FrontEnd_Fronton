@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Persona } from 'src/app/interfaces/persona';
 import { PersonaService } from 'src/app/services/persona.service';
 
+
 @Component({
   selector: 'app-ver-persona',
   templateUrl: './ver-persona.component.html',

@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatSort } from '@angular/material/sort';
@@ -11,7 +11,7 @@ import { PersonaService } from 'src/app/services/persona.service';
   templateUrl: './listado-persona.component.html',
   styleUrls: ['./listado-persona.component.css'],
 })
-export class ListadoPersonaComponent implements AfterViewInit {
+export class ListadoPersonaComponent implements OnInit, AfterViewInit {
   displayedColumns: string[] = [
     'nombres',
     'apellidos',
@@ -42,6 +42,8 @@ export class ListadoPersonaComponent implements AfterViewInit {
     if (this.dataSource.data.length > 0) {
       this.paginator._intl.itemsPerPageLabel = 'Items por página';
     }
+    this.paginator._intl.itemsPerPageLabel = 'Items por página';
+
   }
 
   applyFilter(event: Event) {
@@ -51,8 +53,7 @@ export class ListadoPersonaComponent implements AfterViewInit {
 
   obtenerPersonas() {
     this.loading = true;
-    this._personaService.getPersonas().subscribe(
-      (data) => {
+    this._personaService.getPersonas().subscribe((data) => {
         this.loading = false;
         this.dataSource.data = data;
       });
