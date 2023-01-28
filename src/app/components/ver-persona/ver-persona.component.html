@@ -1,0 +1,21 @@
+<div class="title">
+  <h1>Ver mascota</h1>
+</div>
+
+<app-spinner *ngIf="loading"></app-spinner>
+<div *ngIf="persona != null" class="container">
+  <mat-card class="card">
+    <mat-card-title>{{ persona.nombres }}</mat-card-title>
+    <mat-card-content>
+      <p><strong>Apellidos: </strong>{{ persona.apellidos }}</p>
+      <p><strong>Carner de Identidad: </strong>{{ persona.ciPersona }}</p>
+      <p><strong>Género: </strong>{{ persona.genero }}</p>
+      <p><strong>Fecha de nacimiento: </strong>{{ persona.fechaNacimiento }}</p>
+      <p><strong>Dirección: </strong>{{ persona.direccion }}</p>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button routerLink="/listPersona" mat-raised-button>Volver</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
