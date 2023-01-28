@@ -17,11 +17,11 @@ export class PersonaService {
     return this.http.get<Persona[]>(`${this.myAppUrl}${this.myApiUrl}`)
   }
 
-  getPersona(id: number): Observable<Persona> {
-    return this.http.get<Persona>(`${this.myAppUrl}${this.myApiUrl}${id}`);
+  getPersona(PersonaId: number): Observable<Persona> {
+    return this.http.get<Persona>(`${this.myAppUrl}${this.myApiUrl}${PersonaId}`);
   }
 
-  eliminarPersona(id: number): Observable<void>{
-    return this.http.delete<void>(`${this.myAppUrl}${this.myApiUrl}${id}`)
+  eliminarPersona(PersonaId: number): Observable<void>{
+    return this.http.delete<void>(`${this.myAppUrl}${this.myApiUrl}${PersonaId}`)
   }
 }

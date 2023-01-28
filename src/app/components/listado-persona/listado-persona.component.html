@@ -34,7 +34,7 @@
 
       <ng-container matColumnDef="fechaNacimiento">
         <th mat-header-cell *matHeaderCellDef>Fecha Nacimiento</th>
-        <td mat-cell *matCellDef="let element">{{ element.fechaNac }}</td>
+        <td mat-cell *matCellDef="let element">{{ element.fechaNacimiento }}</td>
       </ng-container>
 
       <ng-container matColumnDef="direccion">
@@ -50,9 +50,9 @@
         </th>
         <td mat-cell *matCellDef="let element">
           
-          <mat-icon class="visibility" routerLink="/verPersona/{{ element.id }}" fontIcon="visibility" matTooltip="Ver"></mat-icon>
+          <mat-icon class="visibility" routerLink="/verPersona/{{ element.PersonaId }}" fontIcon="visibility" matTooltip="Ver"></mat-icon>
           <mat-icon class="edit" routerLink="/editarPersona/1" fontIcon="edit" matTooltip="Editar"></mat-icon>
-          <mat-icon (click)="eliminarPersona( element.id )" class="delete" fontIcon="delete" matTooltip="Borrar"></mat-icon>
+          <mat-icon (click)="eliminarPersona( element.PersonaId )" class="delete" fontIcon="delete" matTooltip="Borrar"></mat-icon>
 
         </td>
       </ng-container>

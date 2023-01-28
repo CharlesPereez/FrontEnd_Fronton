@@ -58,10 +58,10 @@ export class ListadoPersonaComponent implements AfterViewInit {
       });
   }
 
-  eliminarPersona(id: number) {
+  eliminarPersona(PersonaId: number) {
     this.loading = true;
 
-    this._personaService.eliminarPersona(id).subscribe(() =>{
+    this._personaService.eliminarPersona(PersonaId).subscribe(() =>{
       this.mensajeExito();
       this.loading = false; 
       this.obtenerPersonas();   

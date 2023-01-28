@@ -9,7 +9,7 @@ import { PersonaService } from 'src/app/services/persona.service';
   styleUrls: ['./ver-persona.component.css']
 })
 export class VerPersonaComponent implements OnInit{
-    id : number;
+    PersonaId : number;
     persona!: Persona;
     loading: boolean = false;
   /**
@@ -17,7 +17,7 @@ export class VerPersonaComponent implements OnInit{
    */
   constructor(private _personaService: PersonaService,
     private aRoute: ActivatedRoute) {
-      this.id = Number(this.aRoute.snapshot.paramMap.get('id'));
+      this.PersonaId = Number(this.aRoute.snapshot.paramMap.get('PersonaId'));
     }
 
   ngOnInit(): void{
@@ -26,7 +26,7 @@ export class VerPersonaComponent implements OnInit{
 
   obtenerPersona(){
     this.loading = true;
-    this._personaService.getPersona(this.id).subscribe(data => {
+    this._personaService.getPersona(this.PersonaId).subscribe(data => {
       this.persona = data;
       this.loading = false;
     })
