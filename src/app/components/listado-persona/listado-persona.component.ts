@@ -42,8 +42,7 @@ export class ListadoPersonaComponent implements OnInit, AfterViewInit {
     if (this.dataSource.data.length > 0) {
       this.paginator._intl.itemsPerPageLabel = 'Items por página';
     }
-    this.paginator._intl.itemsPerPageLabel = 'Items por página';
-
+    
   }
 
   applyFilter(event: Event) {

@@ -13,7 +13,7 @@ const routes: Routes = [
   {path: 'listPersona', component: ListadoPersonaComponent},
   {path: 'agregarPersona', component: AgregarEditarPersonaComponent},
   {path: 'verPersona/:PersonaId', component: VerPersonaComponent},  
-  {path: 'editarPersona/:PersonaId', component: AgregarEditarPersonaComponent},
+  {path: 'editarPersona/:id', component: AgregarEditarPersonaComponent},
   {path: 'login', component: LoginComponent},
   {path: '**', redirectTo: 'listPersona', pathMatch: 'full'},
 

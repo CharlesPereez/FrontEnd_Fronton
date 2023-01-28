@@ -3,7 +3,7 @@
 </div>
 <app-spinner *ngIf="loading"></app-spinner>
 <div  class="container">
-<mat-form-field *ngIf="dataSource.data.length > 0">
+<mat-form-field>
 
     <mat-label>Filtro</mat-label>
     <input matInput (keyup)="applyFilter($event)" placeholder="Buscar" #input autocomplete="off">
